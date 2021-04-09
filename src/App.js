@@ -1,10 +1,10 @@
 import React from 'react';
 
 import './App.css';
-import TextInput from './components/TextInput';
+import Weather from './components/Weather';
 
 function App() {
-  return <TextInput />;
+  return <Weather />;
 }
 
 export default App;
