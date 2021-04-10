@@ -25,5 +25,6 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/forbid-prop-types': [0, { forbid: ['any'] }],
     'react/prop-types': 0,
+    'react/destructuring-assignment': 1,
   },
 };
