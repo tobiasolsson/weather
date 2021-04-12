@@ -1,9 +1,12 @@
 import React from 'react';
 
 const SubmitButton = (props) => {
-  const { searchHandler } = props;
+  const { searchHandler, newCity } = props;
+  const clicked = () => {
+    searchHandler(newCity);
+  };
   return (
-    <button onClick={() => searchHandler()} type="button">
+    <button onClick={clicked} type="button">
       Search
     </button>
   );

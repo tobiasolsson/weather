@@ -13,11 +13,12 @@ const Weather = () => {
   const [clouds, setClouds] = useState(0);
   const [temp, setTemp] = useState(0);
   const [city, setCity] = useState('Öjersjö');
+  const [newCity, setNewCity] = useState('');
 
-  async function searchHandler() {
+  async function searchHandler(citySerched = city) {
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${citySerched}&units=metric&appid=${API_KEY}`,
         { mode: 'cors' },
       );
       const data = await response.json();
@@ -28,14 +29,11 @@ const Weather = () => {
       setSunrise(data.sys.sunrise);
       setSunset(data.sys.sunset);
       setClouds(data.weather[0].description);
+      setCity(citySerched);
     } catch (error) {
       console.log('error', error);
     }
   }
-
-  useEffect(() => {
-    console.log('city', city);
-  });
 
   useEffect(() => {
     searchHandler();
@@ -43,8 +41,8 @@ const Weather = () => {
 
   return (
     <div>
-      <TextInput newCity={setCity} city={city} />
-      <SubmitButton searchHandler={searchHandler} setCity={setCity} />
+      <TextInput newCity={setNewCity} city={city} />
+      <SubmitButton searchHandler={searchHandler} newCity={newCity} />
       <Forecast
         temp={temp}
         feelsLike={feelsLike}

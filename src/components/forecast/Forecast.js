@@ -7,16 +7,19 @@ import Sunset from './Sunset';
 import City from './City';
 import Clouds from './Clouds';
 
-const Forecast = (props) => (
-  <div>
-    <City city={props.city} />
-    <Temp temp={props.temp} />
-    <Clouds clouds={props.clouds} />
-    <FeelsLike feels={props.feelsLike} />
-    <Humidity humidity={props.humidity} />
-    <Sunrise sunrise={props.sunrise} />
-    <Sunset sunset={props.sunset} />
-  </div>
-);
+const Forecast = (props) => {
+  const { city, temp, clouds, feelsLike, humidity, sunrise, sunset } = props;
+  return (
+    <div>
+      <City city={city} />
+      <Temp temp={temp} />
+      <Clouds clouds={clouds} />
+      <FeelsLike feels={feelsLike} />
+      <Humidity humidity={humidity} />
+      <Sunrise sunrise={sunrise} />
+      <Sunset sunset={sunset} />
+    </div>
+  );
+};
 
 export default Forecast;
