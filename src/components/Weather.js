@@ -34,12 +34,16 @@ const Weather = () => {
   }
 
   useEffect(() => {
+    console.log('city', city);
+  });
+
+  useEffect(() => {
     searchHandler();
   }, []);
 
   return (
     <div>
-      <TextInput />
+      <TextInput newCity={setCity} city={city} />
       <SubmitButton searchHandler={searchHandler} setCity={setCity} />
       <Forecast
         temp={temp}
