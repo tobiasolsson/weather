@@ -14,6 +14,7 @@ const Weather = () => {
   const [temp, setTemp] = useState(0);
   const [city, setCity] = useState('Öjersjö');
   const [newCity, setNewCity] = useState('');
+  const [cityNotFound, setCityNotFound] = useState(false);
 
   async function searchHandler(citySerched = city) {
     try {
@@ -22,7 +23,7 @@ const Weather = () => {
         { mode: 'cors' },
       );
       const data = await response.json();
-      console.log('data', data);
+      setCityNotFound(false);
       setTemp(data.main.temp);
       setFeelsLike(data.main.feels_like);
       setHumidity(data.main.humidity);
@@ -31,7 +32,8 @@ const Weather = () => {
       setClouds(data.weather[0].description);
       setCity(citySerched);
     } catch (error) {
-      console.log('error', error);
+      setCity(citySerched);
+      setCityNotFound(true);
     }
   }
 
@@ -39,21 +41,42 @@ const Weather = () => {
     searchHandler();
   }, []);
 
-  return (
-    <div>
-      <TextInput newCity={setNewCity} city={city} />
-      <SubmitButton searchHandler={searchHandler} newCity={newCity} />
-      <Forecast
-        temp={temp}
-        feelsLike={feelsLike}
-        humidity={humidity}
-        sunrise={sunrise}
-        sunset={sunset}
-        clouds={clouds}
-        city={city}
-      />
-    </div>
-  );
+  let weatherForecast;
+  if (cityNotFound) {
+    weatherForecast = (
+      <div>
+        <TextInput
+          setNewCity={setNewCity}
+          city={city}
+          searchHandler={searchHandler}
+        />
+        <SubmitButton searchHandler={searchHandler} newCity={newCity} />
+        <h1>City was not found</h1>
+        <p>You searched for: {city}</p>
+      </div>
+    );
+  } else {
+    weatherForecast = (
+      <div>
+        <TextInput
+          setNewCity={setNewCity}
+          city={city}
+          searchHandler={searchHandler}
+        />
+        <SubmitButton searchHandler={searchHandler} newCity={newCity} />
+        <Forecast
+          temp={temp}
+          feelsLike={feelsLike}
+          humidity={humidity}
+          sunrise={sunrise}
+          sunset={sunset}
+          clouds={clouds}
+          city={city}
+        />
+      </div>
+    );
+  }
+  return weatherForecast;
 };
 
 export default Weather;

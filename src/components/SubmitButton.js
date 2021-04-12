@@ -5,6 +5,7 @@ const SubmitButton = (props) => {
   const clicked = () => {
     searchHandler(newCity);
   };
+
   return (
     <button onClick={clicked} type="button">
       Search
