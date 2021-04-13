@@ -5,10 +5,10 @@ const TextInput = (props) => {
   const { searchHandler, city, setNewCity } = props;
   const inputHandler = (e) => {
     setTypedCity(e.target.value);
-    setNewCity(typedCity);
   };
   const handleKeypress = (e) => {
     if (e.key === 'Enter') {
+      setNewCity(typedCity);
       searchHandler(typedCity);
     }
   };
