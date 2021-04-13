@@ -30,7 +30,7 @@ const Weather = () => {
       setSunrise(data.sys.sunrise);
       setSunset(data.sys.sunset);
       setClouds(data.weather[0].description);
-      setCity(citySerched);
+      setCity(data.name);
     } catch (error) {
       setCity(citySerched);
       setCityNotFound(true);
