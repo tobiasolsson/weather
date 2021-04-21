@@ -8,11 +8,13 @@
 }
 
 .Sunrise {
+  color: rgb(231, 164, 41);
   position: relative;
   top: 16px;
 }
 
 .Sunset {
+  color: #eed70d;
   position: relative;
   top: 21px;
 }
