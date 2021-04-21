@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.Button {
+  font-family: 'Material Icons';
+  font-size: 26px;
+  background-color: #0808082a;
+  color: #202020;
+  width: 42px;
+  height: 42px;
+  padding: 0 6px;
+  margin: 0;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -5px,
+    rgba(0, 0, 0, 0.04) 0px 5px 5px -2px;
+  border-radius: 0 16px 16px 0;
+}

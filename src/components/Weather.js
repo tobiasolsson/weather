@@ -3,6 +3,8 @@ import SubmitButton from './SubmitButton';
 import TextInput from './TextInput';
 import Forecast from './forecast/Forecast';
 
+import styles from './Weather.module.css';
+
 import API_KEY from '../credentials';
 
 const Weather = () => {
@@ -44,7 +46,7 @@ const Weather = () => {
   let weatherForecast;
   if (cityNotFound) {
     weatherForecast = (
-      <div>
+      <div className={styles.main}>
         <TextInput
           setNewCity={setNewCity}
           city={city}
@@ -57,7 +59,7 @@ const Weather = () => {
     );
   } else {
     weatherForecast = (
-      <div>
+      <div className={styles.main}>
         <TextInput
           setNewCity={setNewCity}
           city={city}

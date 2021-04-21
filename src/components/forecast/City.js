@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './City.module.css';
 
 const City = (props) => (
-  <div>
+  <div className={styles.City}>
     <h1>{props.city}</h1>
   </div>
 );

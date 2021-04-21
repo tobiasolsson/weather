@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './TextInput.module.css';
 
 const TextInput = (props) => {
   const [typedCity, setTypedCity] = useState('');
@@ -19,6 +20,7 @@ const TextInput = (props) => {
         placeholder={city}
         onChange={inputHandler}
         onKeyPress={handleKeypress}
+        className={styles.Input}
       />
     </div>
   );

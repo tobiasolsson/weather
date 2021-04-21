@@ -6,11 +6,12 @@ import Sunrise from './Sunrise';
 import Sunset from './Sunset';
 import City from './City';
 import Clouds from './Clouds';
+import styles from './Forecast.module.css';
 
 const Forecast = (props) => {
   const { city, temp, clouds, feelsLike, humidity, sunrise, sunset } = props;
   return (
-    <div>
+    <div className={styles.main}>
       <City city={city} />
       <Temp temp={temp} />
       <Clouds clouds={clouds} />

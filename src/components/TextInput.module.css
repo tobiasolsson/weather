@@ -1,0 +1,18 @@
+.Input {
+  font-size: 26px;
+  background-color: #08080836;
+  color: #111111b6;
+  width: auto;
+  height: 32px;
+  padding: 5px 10px 5px 20px;
+  margin: 0;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -5px,
+    rgba(0, 0, 0, 0.04) 0px 5px 5px -2px;
+  border-radius: 16px 0 0 16px;
+}
+
+.Input:focus {
+  outline: none;
+  color: #111111;
+}
