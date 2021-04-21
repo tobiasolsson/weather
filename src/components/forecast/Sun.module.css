@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.SunIcon {
+  font-family: 'Material Icons';
+  font-size: 32px;
+}
+.Sun {
+  list-style: none;
+}
+
+.Sunrise {
+  position: relative;
+  top: 16px;
+}
+
+.Sunset {
+  position: relative;
+  top: 21px;
+}
+
+.Risebox {
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+
+.Setbox {
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+
+li {
+  width: 100px;
+}
