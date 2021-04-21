@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { convertUnixTime } from '../../utility';
 import styles from './Sun.module.css';

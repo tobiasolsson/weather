@@ -13,8 +13,8 @@ const Forecast = (props) => {
     <div className={styles.main}>
       <City city={city} />
       <Temp temp={temp} />
-      <Clouds clouds={clouds} />
       <FeelsLike feels={feelsLike} />
+      <Clouds clouds={clouds} />
       <Humidity humidity={humidity} />
       <Sun sunset={sunset} sunrise={sunrise} />
     </div>

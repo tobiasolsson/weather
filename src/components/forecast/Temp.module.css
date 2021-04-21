@@ -1,3 +1,6 @@
 .Temp {
-  place-self: center;
+  display: inline-block;
+  place-self: right;
+  margin-bottom: -10px;
+  font-weight: 800;
 }

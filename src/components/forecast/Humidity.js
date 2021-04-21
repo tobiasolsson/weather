@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Humidity = (props) => (
-  <div>
-    <p>Humidity: {props.humidity}%</p>
-  </div>
+  <p style={{ fontWeight: '200', margin: '30px 50px auto 10px' }}>
+    Humidity: {props.humidity}%
+  </p>
 );
 
 export default Humidity;

@@ -5,6 +5,8 @@
 }
 .Sun {
   list-style: none;
+  font-weight: 200;
+  margin: 10px 50px auto 10px;
 }
 
 .Sunrise {

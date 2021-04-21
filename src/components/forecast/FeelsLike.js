@@ -1,9 +1,9 @@
 import React from 'react';
 
 const FeelsLike = (props) => (
-  <div>
-    <p>Temperature feels like: {props.feels}°C</p>
-  </div>
+  <p style={{ fontSize: '12px', fontWeight: '200' }}>
+    Feels like: {Math.round(props.feels)}°C
+  </p>
 );
 
 export default FeelsLike;
