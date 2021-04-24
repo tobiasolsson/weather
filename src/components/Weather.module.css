@@ -20,15 +20,20 @@
   place-self: center;
 }
 
+.search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 @media screen and (max-width: 600px) {
   .main {
     width: 100%;
     margin-top: 1%;
     text-align: center;
   }
-  .weather {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+  .search {
+    width: 362px;
+    display: inline-block;
   }
 }

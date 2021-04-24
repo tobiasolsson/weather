@@ -60,14 +60,14 @@ const Weather = () => {
   } else {
     weatherForecast = (
       <div className={styles.main}>
-        <div className={styles.weather}>
+        <div className={styles.search}>
           <TextInput
             setNewCity={setNewCity}
             city={city}
             searchHandler={searchHandler}
           />
+          <SubmitButton searchHandler={searchHandler} newCity={newCity} />
         </div>
-        <SubmitButton searchHandler={searchHandler} newCity={newCity} />
         <div className={styles.forecast}>
           <Forecast
             temp={temp}

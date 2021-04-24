@@ -17,8 +17,9 @@
   color: #111111;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .Input {
     width: 80%;
+    border-radius: 16px;
   }
 }
