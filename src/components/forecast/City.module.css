@@ -1,6 +1,24 @@
 .City {
+  display: grid;
   grid-row: 1 / 4;
   place-self: center;
   padding: 1px 50px 1px 10px;
+  margin-right: 10px;
   border-right: 3px solid rgba(55, 55, 58, 0.849);
+}
+
+@media screen and (max-width: 600px) {
+  .City {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    grid-row: 1 / 2;
+    border-right: 0;
+    border-bottom: 1px solid rgba(55, 55, 58, 0.849);
+    justify-content: center;
+  }
+  h1 {
+    margin: 0;
+    margin-top: 20px;
+  }
 }

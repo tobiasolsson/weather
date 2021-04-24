@@ -5,10 +5,30 @@
   background: linear-gradient(120deg, #18a0c540 0%, #00032040 100%) no-repeat;
   border-radius: 35px;
   padding: 50px 50px;
+  box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+.forecast {
+  grid-column-start: 1;
+  grid-column-end: 3;
   place-self: center;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 100%;
+    margin-top: 1%;
+    text-align: center;
+  }
+  .weather {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 }

@@ -16,3 +16,9 @@
   outline: none;
   color: #111111;
 }
+
+@media screen and (max-width: 500px) {
+  .Input {
+    width: 80%;
+  }
+}

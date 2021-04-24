@@ -1,0 +1,12 @@
+.humidity {
+  display: grid;
+  justify-content: right;
+  font-weight: 200;
+  margin: 30px 50px auto 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .humidity {
+    margin: auto;
+  }
+}

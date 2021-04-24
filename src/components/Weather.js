@@ -60,21 +60,25 @@ const Weather = () => {
   } else {
     weatherForecast = (
       <div className={styles.main}>
-        <TextInput
-          setNewCity={setNewCity}
-          city={city}
-          searchHandler={searchHandler}
-        />
+        <div className={styles.weather}>
+          <TextInput
+            setNewCity={setNewCity}
+            city={city}
+            searchHandler={searchHandler}
+          />
+        </div>
         <SubmitButton searchHandler={searchHandler} newCity={newCity} />
-        <Forecast
-          temp={temp}
-          feelsLike={feelsLike}
-          humidity={humidity}
-          sunrise={sunrise}
-          sunset={sunset}
-          clouds={clouds}
-          city={city}
-        />
+        <div className={styles.forecast}>
+          <Forecast
+            temp={temp}
+            feelsLike={feelsLike}
+            humidity={humidity}
+            sunrise={sunrise}
+            sunset={sunset}
+            clouds={clouds}
+            city={city}
+          />
+        </div>
       </div>
     );
   }

@@ -1,6 +1,12 @@
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  place-items: center;
+  justify-content: center;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
 }

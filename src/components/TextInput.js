@@ -14,15 +14,13 @@ const TextInput = (props) => {
     }
   };
   return (
-    <div>
-      <input
-        type="text"
-        placeholder={city}
-        onChange={inputHandler}
-        onKeyPress={handleKeypress}
-        className={styles.Input}
-      />
-    </div>
+    <input
+      type="text"
+      placeholder={city}
+      onChange={inputHandler}
+      onKeyPress={handleKeypress}
+      className={styles.Input}
+    />
   );
 };
 

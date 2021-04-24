@@ -1,9 +1,8 @@
 import React from 'react';
+import styles from './Humidity.module.css';
 
 const Humidity = (props) => (
-  <p style={{ fontWeight: '200', margin: '30px 50px auto 10px' }}>
-    Humidity: {props.humidity}%
-  </p>
+  <p className={styles.humidity}>Humidity: {props.humidity}%</p>
 );
 
 export default Humidity;
